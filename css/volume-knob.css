@@ -28,64 +28,6 @@ body {
 	border-radius: 20%;
 }
 
-.glow {
-	position: absolute;
-	width: 200px;
-	height: 200px;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	border-radius: 50%;
-	box-shadow: 2px 2px 60px hsl(var(--hue), var(--sat), var(--light));
-	transition: opacity 1s linear;
-	opacity: 0;
-}
-
-.knob-container {
-	width: 200px;
-	height: 200px;
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	border-radius: 50%;
-	box-shadow: 5px 5px;
-}
-
-.knob {
-	background-image: url('../img/knob-face-sm.png');
-	width: 100%;
-	height: 100%;
-	position: absolute;
-	transition: transform .5s linear;
-}
-
-.knob-glare {
-	background-image: url('../img/knob-glare-sm.png');
-	width: 100%;
-	height: 100%;
-	position: absolute;
-}
-
-.indicator-container {
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	transform: rotate(-137.5deg);
-	transition: transform .5s linear;
-}
-
-.indicator {
-	position: absolute;
-	background-color: hsl(var(--hue), var(--sat), var(--light));
-	width: 12px;
-	height: 45px;
-	top: 10px;
-	left: 50%;
-	transform: translateX(-50%);
-	border: 2px #222 solid;
-}
-
 .ticks-container {
 	width: 300px;
 	height: 300px;
@@ -159,6 +101,64 @@ body {
 	background-color: hsl(var(--hue), var(--sat), 0%);
 	border: 3px #222 solid;
 	transition: background-color 1s linear;
+}
+
+.glow {
+	position: absolute;
+	width: 200px;
+	height: 200px;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	border-radius: 50%;
+	box-shadow: 2px 2px 60px hsl(var(--hue), var(--sat), var(--light));
+	transition: opacity 1s linear;
+	opacity: 0;
+}
+
+.knob-container {
+	width: 200px;
+	height: 200px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	border-radius: 50%;
+	box-shadow: 5px 5px;
+}
+
+.knob {
+	background-image: url('../img/knob-face-sm.png');
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	transition: transform .5s linear;
+}
+
+.knob-glare {
+	background-image: url('../img/knob-glare-sm.png');
+	width: 100%;
+	height: 100%;
+	position: absolute;
+}
+
+.indicator-container {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	transform: rotate(-137.5deg);
+	transition: transform .5s linear;
+}
+
+.indicator {
+	position: absolute;
+	background-color: hsl(var(--hue), var(--sat), var(--light));
+	width: 12px;
+	height: 45px;
+	top: 10px;
+	left: 50%;
+	transform: translateX(-50%);
+	border: 2px #222 solid;
 }
 
 .container:hover .indicator-container,
