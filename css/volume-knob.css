@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit&family=Righteous&display=swap');
 :root {
 	--hue: 185;
 	--sat: 99%;
@@ -9,6 +10,8 @@
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
+	font-family: "Kanit", arial;
+	color: #111;
 }
 
 body {
@@ -20,12 +23,18 @@ body {
 	align-items: center;
 }
 
+.panel {
+	border: 5px #222 groove;
+	position: relative;
+	border-radius: 5%;
+	width: 400px;
+	height: 500px
+}
+
 .container {
 	width: 400px;
 	height: 400px;
-	border: 5px #222 groove;
-	position: relative;
-	border-radius: 20%;
+	position: relative
 }
 
 .ticks-container {
@@ -100,7 +109,230 @@ body {
 	transform: translateX(-50%);
 	background-color: hsl(var(--hue), var(--sat), 0%);
 	border: 3px #222 solid;
-	transition: background-color 1s linear;
+	/* transition: background-color 0s; */
+}
+
+.panel:hover .tick-00 {
+	animation: ticking-00 .5s;
+	animation-fill-mode: forwards;
+}
+.panel:hover .tick-01 {
+	animation: ticking-01 .5s;
+	animation-fill-mode: forwards;
+}
+.panel:hover .tick-02 {
+	animation: ticking-02 .5s;
+	animation-fill-mode: forwards;
+}
+.panel:hover .tick-03 {
+	animation: ticking-03 .5s;
+	animation-fill-mode: forwards;
+}
+.panel:hover .tick-04 {
+	animation: ticking-04 .5s;
+	animation-fill-mode: forwards;
+}
+.panel:hover .tick-05 {
+	animation: ticking-05 .5s;
+	animation-fill-mode: forwards;
+}
+.panel:hover .tick-06 {
+	animation: ticking-06 .5s;
+	animation-fill-mode: forwards;
+}
+.panel:hover .tick-07 {
+	animation: ticking-07 .5s;
+	animation-fill-mode: forwards;
+}
+.panel:hover .tick-08 {
+	animation: ticking-08 .5s;
+	animation-fill-mode: forwards;
+}
+.panel:hover .tick-09 {
+	animation: ticking-09 .5s;
+	animation-fill-mode: forwards;
+}
+.panel:hover .tick-10 {
+	animation: ticking-10 .5s;
+	animation-fill-mode: forwards;
+}
+.panel:hover .tick-11 {
+	animation: ticking-11 .5s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes ticking-00 {
+	0% {
+		background-color: hsl(var(--hue), var(--sat), var(--light));
+	}
+	100% {
+		background-color: hsl(var(--hue), var(--sat), var(--light));
+	}
+}
+
+@keyframes ticking-01 {
+	0% {
+		background-color: hsl(var(--hue), var(--sat), 0%);
+	}
+	8.32% {
+		background-color: hsl(var(--hue), var(--sat), 0%);
+	}
+	8.33% {
+		background-color: hsl(var(--hue), var(--sat), var(--light));
+	}
+	100% {
+		background-color: hsl(var(--hue), var(--sat), var(--light));
+	}
+}
+
+@keyframes ticking-02 {
+	0% {
+		background-color: hsl(var(--hue), var(--sat), 0%);
+	}
+	16.66% {
+		background-color: hsl(var(--hue), var(--sat), 0%);
+	}
+	16.67% {
+		background-color: hsl(var(--hue), var(--sat), var(--light));
+	}
+	100% {
+		background-color: hsl(var(--hue), var(--sat), var(--light));
+	}
+}
+
+@keyframes ticking-03 {
+	0% {
+		background-color: hsl(var(--hue), var(--sat), 0%);
+	}
+	24% {
+		background-color: hsl(var(--hue), var(--sat), 0%);
+	}
+	25% {
+		background-color: hsl(var(--hue), var(--sat), var(--light));
+	}
+	100% {
+		background-color: hsl(var(--hue), var(--sat), var(--light));
+	}
+}
+
+@keyframes ticking-04 {
+	0% {
+		background-color: hsl(var(--hue), var(--sat), 0%);
+	}
+	33.32% {
+		background-color: hsl(var(--hue), var(--sat), 0%);
+	}
+	33.33% {
+		background-color: hsl(var(--hue), var(--sat), var(--light));
+	}
+	100% {
+		background-color: hsl(var(--hue), var(--sat), var(--light));
+	}
+}
+
+@keyframes ticking-05 {
+	0% {
+		background-color: hsl(var(--hue), var(--sat), 0%);
+	}
+	41.66% {
+		background-color: hsl(var(--hue), var(--sat), 0%);
+	}
+	41.67% {
+		background-color: hsl(var(--hue), var(--sat), var(--light));
+	}
+	100% {
+		background-color: hsl(var(--hue), var(--sat), var(--light));
+	}
+}
+
+@keyframes ticking-06 {
+	0% {
+		background-color: hsl(var(--hue), var(--sat), 0%);
+	}
+	49% {
+		background-color: hsl(var(--hue), var(--sat), 0%);
+	}
+	50% {
+		background-color: hsl(var(--hue), var(--sat), var(--light));
+	}
+	100% {
+		background-color: hsl(var(--hue), var(--sat), var(--light));
+	}
+}
+
+@keyframes ticking-07 {
+	0% {
+		background-color: hsl(var(--hue), var(--sat), 0%);
+	}
+	58.32% {
+		background-color: hsl(var(--hue), var(--sat), 0%);
+	}
+	58.33% {
+		background-color: hsl(var(--hue), var(--sat), var(--light));
+	}
+	100% {
+		background-color: hsl(var(--hue), var(--sat), var(--light));
+	}
+}
+
+@keyframes ticking-08 {
+	0% {
+		background-color: hsl(var(--hue), var(--sat), 0%);
+	}
+	66.66% {
+		background-color: hsl(var(--hue), var(--sat), 0%);
+	}
+	66.67% {
+		background-color: hsl(var(--hue), var(--sat), var(--light));
+	}
+	100% {
+		background-color: hsl(var(--hue), var(--sat), var(--light));
+	}
+}
+
+@keyframes ticking-09 {
+	0% {
+		background-color: hsl(var(--hue), var(--sat), 0%);
+	}
+	74% {
+		background-color: hsl(var(--hue), var(--sat), 0%);
+	}
+	75% {
+		background-color: hsl(var(--hue), var(--sat), var(--light));
+	}
+	100% {
+		background-color: hsl(var(--hue), var(--sat), var(--light));
+	}
+}
+
+@keyframes ticking-10 {
+	0% {
+		background-color: hsl(var(--hue), var(--sat), 0%);
+	}
+	83.32% {
+		background-color: hsl(var(--hue), var(--sat), 0%);
+	}
+	83.33% {
+		background-color: hsl(var(--hue), var(--sat), var(--light));
+	}
+	100% {
+		background-color: hsl(var(--hue), var(--sat), var(--light));
+	}
+}
+
+@keyframes ticking-11 {
+	0% {
+		background-color: hsl(var(--hue), var(--sat), 0%);
+	}
+	91.66% {
+		background-color: hsl(var(--hue), var(--sat), 0%);
+	}
+	91.67% {
+		background-color: hsl(var(--hue), var(--sat), var(--light));
+	}
+	100% {
+		background-color: hsl(var(--hue), var(--sat), var(--light));
+	}
 }
 
 .glow {
@@ -161,15 +393,60 @@ body {
 	border: 2px #222 solid;
 }
 
-.container:hover .indicator-container,
+.panel:hover .indicator-container,
 .knob {
 	transform: rotate(137.5deg);
 }
 
-.container:hover .glow {
+.panel:hover .glow {
    opacity: 1;
 }
 
-.container:hover .tick {
-	background-color: hsl(var(--hue), var(--sat), var(--light));
+.numbers {
+	display: flex;
+	width: 100%;
+	position: absolute;
+	bottom: 40px;
+	gap: 50px;
 }
+
+.zero, .eleven {
+	flex: 1;
+	text-align: center;
+	font-size: 2.5em;
+}
+
+.link-title {
+	position: absolute;
+	width: 100%;
+	text-align: center;
+}
+
+.link-text {
+	font-size: 3.5em;
+	transition: color 1s ease;
+}
+
+.panel:hover .link-text {
+	color: hsl(var(--hue), var(--sat), var(--light));
+}
+
+
+/* Code to make trianlges 
+*****FOR LATER *****
+
+ #triangle-up {
+      width: 0;
+      height: 0;
+      border-left: 50px solid transparent;
+      border-right: 50px solid transparent;
+      border-bottom: 100px solid red;
+    }
+
+	    #triangle-down {
+      width: 0;
+      height: 0;
+      border-left: 50px solid transparent;
+      border-right: 50px solid transparent;
+      border-top: 100px solid red;
+    } *?
