@@ -4,6 +4,7 @@
 	--sat: 99%;
 	--light: 65%;
 	--start-deg: -135deg;
+	--panel-width: 500px;
 }
 
 * {
@@ -23,27 +24,37 @@ body {
 	align-items: center;
 }
 
+a {
+	text-decoration: none;
+}
+
 .panel {
-	border: 5px #222 groove;
+	border: calc(var(--panel-width) * .01) #111 solid;
 	position: relative;
-	border-radius: 5%;
-	width: 400px;
-	height: 500px
+	border-radius: calc(var(--panel-width) * .1);
+	width: var(--panel-width);
+	height: calc(var(--panel-width) * 7/5);
+	display: flex;
+	align-items: center;
+	flex-direction: column;
 }
 
 .container {
-	width: 400px;
-	height: 400px;
-	position: relative
+	width: calc(var(--panel-width) *.8);
+	height: calc(var(--panel-width) *.8);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	margin-top: 5%;
 }
 
 .ticks-container {
-	width: 300px;
-	height: 300px;
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 .tick-container-00,
@@ -61,6 +72,10 @@ body {
 	position: absolute;
 	width: 100%;
 	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 50%;
 }
 
 .tick-container-00 {
@@ -102,14 +117,11 @@ body {
 
 .tick {
 	position: absolute;
-	width: 8px;
-	height: 30px;
-	top: 8px;
-	left: 50%;
-	transform: translateX(-50%);
+	width: 2.5%;
+	height: 9%;
+	top: 2%;
 	background-color: hsl(var(--hue), var(--sat), 0%);
-	border: 3px #222 solid;
-	/* transition: background-color 0s; */
+	border: calc(var(--panel-width) / 2 * .01) #222 solid;
 }
 
 .panel:hover .tick-00 {
@@ -337,30 +349,33 @@ body {
 
 .glow {
 	position: absolute;
-	width: 200px;
-	height: 200px;
+	width: 70%;
+	height: 70%;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
 	border-radius: 50%;
-	box-shadow: 2px 2px 60px hsl(var(--hue), var(--sat), var(--light));
+	box-shadow: 0 0 calc(var(--panel-width) * .1) hsl(var(--hue), var(--sat), var(--light));
 	transition: opacity 1s linear;
 	opacity: 0;
 }
 
 .knob-container {
-	width: 200px;
-	height: 200px;
+	width: 70%;
+	height: 70%;
 	position: absolute;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
 	border-radius: 50%;
-	box-shadow: 5px 5px;
+	box-shadow: calc(var(--panel-width) * .01) calc(var(--panel-width) * .02) #111;
+	overflow: hidden;
 }
 
 .knob {
 	background-image: url('../img/knob-face-sm.png');
+	background-size: 100%;
+	background-repeat: no-repeat;
 	width: 100%;
 	height: 100%;
 	position: absolute;
@@ -369,6 +384,7 @@ body {
 
 .knob-glare {
 	background-image: url('../img/knob-glare-sm.png');
+	background-size: 100%;
 	width: 100%;
 	height: 100%;
 	position: absolute;
@@ -385,12 +401,12 @@ body {
 .indicator {
 	position: absolute;
 	background-color: hsl(var(--hue), var(--sat), var(--light));
-	width: 12px;
-	height: 45px;
-	top: 10px;
+	width: 4%;
+	height: 15%;
+	top: 2%;
 	left: 50%;
 	transform: translateX(-50%);
-	border: 2px #222 solid;
+	border: calc(var(--panel-width) / 2 * .01) #333 solid;
 }
 
 .panel:hover .indicator-container,
@@ -403,27 +419,30 @@ body {
 }
 
 .numbers {
-	display: flex;
 	width: 100%;
-	position: absolute;
-	bottom: 40px;
-	gap: 50px;
+	margin-top: -12%;
+	display: flex;
+	align-items: center;
+	gap: 20%
 }
 
 .zero, .eleven {
 	flex: 1;
 	text-align: center;
-	font-size: 2.5em;
+	font-size: calc(var(--panel-width) * .08) ;
 }
 
 .link-title {
-	position: absolute;
 	width: 100%;
-	text-align: center;
+	height: 40%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0 10%;
 }
 
 .link-text {
-	font-size: 3.5em;
+	font-size: calc(var(--panel-width) * .2);
 	transition: color 1s ease;
 }
 
