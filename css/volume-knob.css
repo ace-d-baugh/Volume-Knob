@@ -461,10 +461,6 @@ a {
 	transform: translate(calc(var(--panel-width) *- .002), calc(var(--panel-width) * -.002));
 }
 
-.panel:active .numbers, .panel:active .link-text {
-	color: hsl(var(--hue), var(--sat), var(--light));
-}
-
 .numbers {
 	width: 100%;
 	margin-top: -12%;
