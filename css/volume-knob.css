@@ -419,15 +419,6 @@ a {
 	border-radius: 50%;
 }
 
-.knob-glare {
-	background-image: url('../img/knob-glare-sm.png');
-	background-size: 100%;
-	width: 100%;
-	height: 100%;
-	position: absolute;
-	transform: rotate(-30deg);
-}
-
 .indicator-container {
 	position: absolute;
 	width: 100%;
@@ -537,21 +528,50 @@ a {
 	}
 }
 
-/* Code to make trianlges 
-*****FOR LATER *****
+.glare {
+	position: absolute;
+	border-radius: 50%;
+	width: calc(var(--panel-width) * .8 * .7);
+	height: calc(var(--panel-width) * .8 * .7);;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	overflow: hidden;
+	transform: rotate(-30deg);
+}
 
- #triangle-up {
-      width: 0;
-      height: 0;
-      border-left: 50px solid transparent;
-      border-right: 50px solid transparent;
-      border-bottom: 100px solid red;
-    }
+.left-line {
+	position: absolute;
+	width: calc(var(--panel-width) * .8 * .7);
+	height: calc(var(--panel-width) * .8 * .7);
+	background-image: -webkit-linear-gradient(15deg, rgba(255,255,255,0) 0%, 
+																							rgba(255,255,255,.00) 30%, 
+																							rgba(255,255,255,.15) 50%, 
+																							rgba(255,255,255,.03) 70%, 
+																							rgba(255,255,255,0) 100%);
+	transform: rotate(45deg) scale3d(30 30 30);
+}
 
-	    #triangle-down {
-      width: 0;
-      height: 0;
-      border-left: 50px solid transparent;
-      border-right: 50px solid transparent;
-      border-top: 100px solid red;
-    } *?
+.middle-line {
+	position: absolute;
+	width: calc(var(--panel-width) * .8 * .7);
+	height: calc(var(--panel-width) * .8 * .7);
+	background-image: -webkit-linear-gradient(0deg, rgba(255,255,255,0) 0%, 
+																							rgba(255,255,255,.03) 30%, 
+																							rgba(255,255,255,.15) 50%, 
+																							rgba(255,255,255,.03) 70%, 
+																							rgba(255,255,255,0) 100%);
+	transform: rotate(45deg) scale3d(30 30 30);
+}
+
+.right-line {
+	position: absolute;
+	width: calc(var(--panel-width) * .8 * .7);
+	height: calc(var(--panel-width) * .8 * .7);
+	background-image: -webkit-linear-gradient(-15deg, rgba(255,255,255,0) 0%, 
+																							rgba(255,255,255,.03) 30%, 
+																							rgba(255,255,255,.15) 50%, 
+																							rgba(255,255,255,.0) 70%, 
+																							rgba(255,255,255,0) 100%);
+	transform: rotate(45deg) scale3d(30 30 30);
+}
